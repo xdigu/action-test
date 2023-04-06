@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo "action @v1"
+echo "action @v2"
 
 if [[ $ACCOUNT ]]; then
     echo "Hello $ACCOUNT"
