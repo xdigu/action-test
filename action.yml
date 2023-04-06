@@ -1,0 +1,21 @@
+name: Action hello world
+description: Creating test action.
+author: xdigu
+
+inputs:
+  name:
+    description: "Name to hail"
+    required: false
+
+runs:
+  using: "composite"
+  steps:
+    - name: "Print Hello World"
+      run: bash $GITHUB_ACTION_PATH/entrypoint.sh
+      env:
+        ACCOUNT: ${{ inputs.name }}
+      shell: bash
+
+branding:
+  icon: terminal
+  color: red
