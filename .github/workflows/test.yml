@@ -9,7 +9,7 @@ jobs:
       - name: create env color
         id: green
         run: |
-          echo "COLOR=GREEN" >> $GITHUB_OUTPUT
+          echo "COLOR=GREEN" >> $GITHUB_ENV
           
       - name: Print color
         run: |
@@ -19,7 +19,7 @@ jobs:
       - name: create env color
         id: yellow
         run: |
-          echo COLOR=GREEN" >> $GITHUB_OUTPUT
+          echo "COLOR=Yellow" >> $GITHUB_ENV
 
       - name: Print color
         run: |
