@@ -13,15 +13,15 @@ jobs:
           
       - name: Print color
         run: |
-          echo "step {{ steps.green.outputs.COLOR }}"
-          echo "env {{ env.COLOR }}"
+          echo step {{ steps.green.outputs.COLOR }}
+          echo env {{ env.COLOR }}
           
       - name: create env color
         id: yellow
         run: |
-          echo "COLOR=GREEN" >> $GITHUB_OUTPUT
+          echo COLOR=GREEN" >> $GITHUB_OUTPUT
 
       - name: Print color
         run: |
-          echo "step {{ steps.yellow.outputs.COLOR }}"
-          echo "env {{ env.COLOR }}"
+          echo "step {{ steps.yellow.outputs.COLOR }}
+          echo env {{ env.COLOR }}
