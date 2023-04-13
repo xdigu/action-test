@@ -1,0 +1,27 @@
+name: Test
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: create env color
+        id: green
+        run: |
+          echo "COLOR=GREEN" >> $GITHUB_OUTPUT
+          
+      - name: Print color
+        run: |
+          echo "step {{ steps.green.outputs.COLOR }}"
+          echo "env {{ env.COLOR }}"
+          
+      - name: create env color
+        id: yellow
+        run: |
+          echo "COLOR=GREEN" >> $GITHUB_OUTPUT
+
+      - name: Print color
+        run: |
+          echo "step {{ steps.yellow.outputs.COLOR }}"
+          echo "env {{ env.COLOR }}"
